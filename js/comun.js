@@ -451,6 +451,7 @@
       '<li><strong>Respondela como Sector Técnico.</strong> En la <a href="bandeja.html">bandeja interna</a>, elegí tu solicitud, marcá el resultado de cada tramo y enviá la nota.</li>' +
       '<li><strong>Mirá lo que recibe quien la pidió.</strong> En <a href="seguimiento.html">Consultar el estado</a> la ves respondida, con la nota armada con el modelo del Sector Técnico.</li>' +
       '</ol>' +
+      '<p class="guia__piloto"><strong>En la prueba piloto no se usa esta página.</strong> Las empresas y los profesionales completan un formulario PDF, lo firman y lo mandan con los planos a la casilla del trámite. El Sector Técnico les responde a ese correo con la nota firmada en GDE. Esta página es la etapa siguiente.</p>' +
       '<p class="guia__pie">Es un prototipo: nada llega a EPEN y todo queda guardado solo en este navegador. «Restablecer el prototipo» vuelve a los trámites de ejemplo.</p>' +
       '<div class="botonera"><button class="boton boton--verde" value="ok">Entendido</button></div>' +
       '</form>';
