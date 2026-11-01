@@ -91,6 +91,10 @@
     return /^\d+$/.test(v) ? 'N° ' + v : v;
   };
   EPEN.calleCompleta = (t) => [String(t.calle || '').trim(), EPEN.altura(t.altura)].filter(Boolean).join(' ');
+  // Nomenclatura catastral del tramo. Es opcional: solo la tienen las obras en un lote.
+  EPEN.nc = (t) => String((t && t.nc) || '').trim();
+  // Calle con la nomenclatura al final, para listas de una línea.
+  EPEN.calleConNC = (t) => EPEN.calleCompleta(t) + (EPEN.nc(t) ? ' (N.C. ' + EPEN.nc(t) + ')' : '');
 
   // ---------- Validaciones ----------
 

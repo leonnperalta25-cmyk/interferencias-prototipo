@@ -423,7 +423,7 @@ strong, b { font-weight: 800; }
 /* ---------- Campos de formulario ---------- */
 
 .grilla-campos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 18px 22px; }
-.grilla-campos--tramo { grid-template-columns: repeat(auto-fit, minmax(min(190px, 100%), 1fr)); gap: 18px 20px; }
+.grilla-campos--tramo { grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 18px 20px; }
 .campo { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .campo__etiqueta { font-size: 16px; font-weight: 700; }
 .campo__opcional { font-weight: 600; color: var(--texto-2); }
@@ -723,6 +723,8 @@ input[type="radio"], input[type="checkbox"] { accent-color: var(--verde-texto); 
 .filas-tramos span { display: block; font-size: 14px; color: var(--texto-2); }
 .filas-tramos strong { font-weight: 700; overflow-wrap: anywhere; }
 .filas-tramos .resultado-si { color: var(--pizarra); }
+.filas-tramos .filas-tramos__nc { margin-top: 2px; }
+.filas-tramos__titulo { grid-column: 1 / -1; margin: 0; font-size: 15px; font-weight: 800; color: var(--pizarra); }
 
 /* ---------- Píldoras de estado ---------- */
 
@@ -1363,7 +1365,8 @@ label.boton:focus-within { outline: 3px solid var(--verde-texto); outline-offset
   .titulo-pagina { margin-top: 6px; padding-bottom: 10px; font-size: 20pt; }
   .tarjeta, .recuadro, .filas-tramos li, .mapa { break-inside: avoid; }
   .datos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .filas-tramos li { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .filas-tramos li { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); }
+  .filas-tramos--revision li { grid-auto-flow: row; grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .confirmacion { margin: 12px 0 0; padding: 0; border: 0; gap: 12px; }
   .confirmacion h2 { font-size: 20pt; }
   .numero-grande { font-size: 26pt; }

@@ -88,7 +88,7 @@
         .map(
           (x, i) =>
             '<li><div><span>Barrio</span><strong>' + esc(x.barrio) + '</strong></div>' +
-            '<div><span>Calle</span><strong>' + esc(E.calleCompleta(x)) + '</strong></div>' +
+            '<div><span>Calle</span><strong>' + esc(E.calleCompleta(x)) + '</strong>' + (E.nc(x) ? '<span class="filas-tramos__nc">N.C. ' + esc(E.nc(x)) + '</span>' : '') + '</div>' +
             '<div><span>Resultado</span><strong style="font-weight:800">' + resultadoTramo(r.resultados[i]) + '</strong></div></li>'
         )
         .join('') +
@@ -153,7 +153,7 @@
       '</dl></div>' +
       (estado !== 'respondida'
         ? '<div><h3 style="margin-bottom:10px">Calles o tramos</h3><ol style="margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;font-size:16px">' +
-          t.tramos.map((x) => '<li><strong>' + esc(x.barrio) + '</strong>, ' + esc(E.calleCompleta(x)) + '</li>').join('') +
+          t.tramos.map((x) => '<li><strong>' + esc(x.barrio) + '</strong>, ' + esc(E.calleConNC(x)) + '</li>').join('') +
           '</ol></div>'
         : '');
 

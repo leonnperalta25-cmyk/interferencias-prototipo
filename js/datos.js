@@ -12,7 +12,7 @@
   'use strict';
 
   const EPEN = window.EPEN;
-  const VERSION = 4;
+  const VERSION = 5;
 
   // Correo de los trámites de ejemplo, para poder consultarlos en el seguimiento.
   EPEN.CORREO_EJEMPLO = 'prueba@example.com';
@@ -73,7 +73,7 @@
         descripcion: 'Excavación para bases y conexión cloacal en el frente del lote.'
       },
       localidad: 'Villa La Angostura',
-      tramos: [{ barrio: 'Puerto Manzano', calle: '[Calle]', altura: 'N° [altura]' }],
+      tramos: [{ barrio: 'Puerto Manzano', calle: '[Calle]', altura: 'N° [altura]', nc: '[N.C.]' }],
       zona: { tipo: 'area', puntos: [[300, 58], [384, 58], [384, 104], [300, 104]] },
       adjuntos: [{ nombre: 'Plano de obra.pdf', bytes: 1258291 }],
       aceptaciones: acepta(),
@@ -136,7 +136,7 @@
         descripcion: 'Excavación para platea y conexiones domiciliarias.'
       },
       localidad: 'Villa La Angostura',
-      tramos: [{ barrio: 'Puerto Manzano', calle: '[Calle]', altura: 'N° [altura]' }],
+      tramos: [{ barrio: 'Puerto Manzano', calle: '[Calle]', altura: 'N° [altura]', nc: '[N.C.]' }],
       zona: { tipo: 'area', puntos: [[440, 230], [520, 230], [520, 280], [440, 280]] },
       adjuntos: [],
       aceptaciones: acepta(),
@@ -177,7 +177,7 @@
       },
       localidad: 'Villa La Angostura',
       tramos: [
-        { barrio: 'Las Balsas', calle: '[Calle]', altura: 'N° [altura]' },
+        { barrio: 'Las Balsas', calle: '[Calle]', altura: 'N° [altura]', nc: '[N.C.]' },
         { barrio: 'Las Balsas', calle: '[Calle]', altura: 'entre [calle] y [calle]' }
       ],
       zona: { tipo: 'area', puntos: [[150, 190], [380, 190], [380, 220], [150, 220]] },
@@ -433,7 +433,7 @@
           return (
             '<tr><td>' + e(EPEN.mayus(oracion(t.obra.proyecto))) + '</td>' +
             '<td>' + e(EPEN.mayus(oracion(x.barrio))) + '</td>' +
-            '<td>' + e(EPEN.mayus(EPEN.calleCompleta(x))) + '</td>' + obs + '</tr>'
+            '<td>' + e(EPEN.mayus(EPEN.calleCompleta(x))) + (EPEN.nc(x) ? '<br>N.C. ' + e(EPEN.nc(x)) : '') + '</td>' + obs + '</tr>'
           );
         })
         .join('');

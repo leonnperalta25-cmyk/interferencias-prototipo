@@ -43,7 +43,7 @@
     return lista.filter(
       (t) =>
         (filtro === 'todas' || t.estado === filtro) &&
-        (!txt || (t.numero + ' ' + E.datos.nombre(t) + ' ' + E.datos.barrios(t)).toLowerCase().indexOf(txt) >= 0)
+        (!txt || (t.numero + ' ' + E.datos.nombre(t) + ' ' + E.datos.barrios(t) + ' ' + t.tramos.map(E.nc).join(' ')).toLowerCase().indexOf(txt) >= 0)
     );
   };
 
@@ -118,7 +118,7 @@
       t.tramos
         .map(
           (x, i) =>
-            '<li><strong>' + esc(x.barrio) + ', ' + esc(E.calleCompleta(x)) + ':</strong> ' +
+            '<li><strong>' + esc(x.barrio) + ', ' + esc(E.calleConNC(x)) + ':</strong> ' +
             (r.resultados[i] === 'si' ? 'existen interferencias subterráneas, con plano adjunto.' : 'no existen interferencias subterráneas.') + '</li>'
         )
         .join('') +
@@ -136,7 +136,7 @@
       .map((x, i) => {
         const grupo = 'res-' + E.numeroAUrl(t.numero) + '-' + i;
         return (
-          '<li><fieldset class="grupo"><legend>Tramo ' + (i + 1) + ': ' + esc(x.barrio) + ', ' + esc(E.calleCompleta(x)) + '</legend>' +
+          '<li><fieldset class="grupo"><legend>Tramo ' + (i + 1) + ': ' + esc(x.barrio) + ', ' + esc(E.calleConNC(x)) + '</legend>' +
           '<div class="opciones">' +
           '<label class="opcion opcion--chica"><input type="radio" name="' + grupo + '" value="si" data-resultado="' + i + '"' + (b.resultados[i] === 'si' ? ' checked' : '') + '><span>Existen interferencias subterráneas</span></label>' +
           '<label class="opcion opcion--chica"><input type="radio" name="' + grupo + '" value="no" data-resultado="' + i + '"' + (b.resultados[i] === 'no' ? ' checked' : '') + '><span>No existen</span></label>' +

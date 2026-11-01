@@ -39,7 +39,7 @@
   const nuevoEstado = () => ({
     quien: 'empresa',
     f: Object.assign({}, VACIO),
-    tramos: [{ id: 1, barrio: '', calle: '', altura: '' }],
+    tramos: [{ id: 1, barrio: '', calle: '', altura: '', nc: '' }],
     sigId: 2,
     mapa: { modo: 'area', puntos: [], punto: null },
     archivos: [],
@@ -59,8 +59,8 @@
       descripcion: 'Zanjeo por vereda para tendido de fibra óptica, con cruces de calle por perforación dirigida.'
     };
     s.tramos = [
-      { id: 1, barrio: 'El Once', calle: '[Calle]', altura: 'entre [calle] y [calle]' },
-      { id: 2, barrio: 'El Once', calle: '[Calle]', altura: 'N° [altura]' }
+      { id: 1, barrio: 'El Once', calle: '[Calle]', altura: 'entre [calle] y [calle]', nc: '' },
+      { id: 2, barrio: 'El Once', calle: '[Calle]', altura: 'N° [altura]', nc: '[N.C.]' }
     ];
     s.sigId = 3;
     s.mapa = { modo: 'area', puntos: [[140, 188], [610, 188], [610, 222], [140, 222]], punto: null };
@@ -259,6 +259,8 @@
           '<p class="campo__error" id="e-' + id + '-calle" hidden></p></div>' +
           '<div class="campo"><label class="campo__etiqueta" for="' + id + '-altura">Altura o entre calles</label>' +
           '<input class="entrada" id="' + id + '-altura" data-tramo="' + t.id + '" data-parte="altura" type="text" maxlength="100" placeholder="Ej.: N° 1010" value="' + esc(t.altura) + '"></div>' +
+          '<div class="campo"><label class="campo__etiqueta" for="' + id + '-nc">Nomenclatura catastral</label>' +
+          '<input class="entrada" id="' + id + '-nc" data-tramo="' + t.id + '" data-parte="nc" type="text" maxlength="40" autocomplete="off" spellcheck="false" placeholder="Ej.: 00-00-000-0000" value="' + esc(t.nc || '') + '" aria-describedby="ayuda-nc"></div>' +
           '</div>' +
           (puedeQuitar
             ? '<button class="boton boton--quitar" type="button" data-quitar-tramo="' + t.id + '" aria-label="Quitar el tramo ' + n + '"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><path d="M4 7 H20"></path><path d="M9 7 V4.5 H15 V7"></path><path d="M6.5 7 L7.5 20 H16.5 L17.5 7"></path></svg>Quitar este tramo</button>'
@@ -276,7 +278,7 @@
     if (st.tramos.length >= MAX_TRAMOS) return;
     const ultimo = st.tramos[st.tramos.length - 1];
     const id = st.sigId++;
-    st.tramos.push({ id, barrio: ultimo ? ultimo.barrio : '', calle: '', altura: '' });
+    st.tramos.push({ id, barrio: ultimo ? ultimo.barrio : '', calle: '', altura: '', nc: '' });
     pintarTramos(id);
     pintarErrores();
     guardarBorrador();
@@ -290,7 +292,7 @@
     if (i < 0 || st.tramos.length <= 1) return;
     st.tramos.splice(i, 1);
     Object.keys(st.tocados).forEach((k) => {
-      if (k.indexOf('t' + id) === 0) delete st.tocados[k];
+      if (new RegExp('^t' + id + '[a-z]').test(k)) delete st.tocados[k];
     });
     pintarTramos();
     pintarErrores();
@@ -469,7 +471,7 @@
   let temporizadorBorrador = null;
   const tieneDatos = (s) =>
     Object.keys(VACIO).some((k) => !E.vacio(s.f[k])) ||
-    s.tramos.some((t) => !E.vacio(t.barrio) || !E.vacio(t.calle) || !E.vacio(t.altura)) ||
+    s.tramos.some((t) => !E.vacio(t.barrio) || !E.vacio(t.calle) || !E.vacio(t.altura) || !E.vacio(t.nc)) ||
     s.archivos.length > 0 || s.mapa.puntos.length > 0 || !!s.mapa.punto;
 
   const guardarBorrador = () => {
@@ -565,6 +567,10 @@
         if (k === 'correo' || k === 'correo2') t.value = st.f[k] = t.value.trim();
         if (!E.vacio(t.value) || st.tocados[k]) st.tocados[k] = true;
         pintarErrores();
+        guardarBorrador();
+      } else if (t.dataset.tramo && t.dataset.parte === 'nc') {
+        const tr = st.tramos.find((x) => x.id === Number(t.dataset.tramo));
+        if (tr) t.value = tr.nc = t.value.trim();
         guardarBorrador();
       } else if (t.dataset.tramo && t.dataset.parte !== 'altura') {
         const k = 't' + t.dataset.tramo + t.dataset.parte;
@@ -704,14 +710,15 @@
     const d = datosRevision();
     const zona = zonaValida();
     const tramos =
-      '<ol class="filas-tramos" aria-label="Calles o tramos">' +
+      '<ol class="filas-tramos filas-tramos--revision" aria-label="Calles o tramos">' +
       st.tramos
         .map(
           (t, i) =>
-            '<li><div><span>Tramo</span><strong>' + (i + 1) + '</strong></div>' +
+            '<li><p class="filas-tramos__titulo">Tramo ' + (i + 1) + '</p>' +
             '<div><span>Barrio</span><strong>' + esc(t.barrio) + '</strong></div>' +
             '<div><span>Calle, ruta o camino</span><strong>' + esc(t.calle) + '</strong></div>' +
-            '<div><span>Altura o entre calles</span><strong>' + esc(E.altura(t.altura) || 'Sin indicar') + '</strong></div></li>'
+            '<div><span>Altura o entre calles</span><strong>' + esc(E.altura(t.altura) || 'Sin indicar') + '</strong></div>' +
+            '<div><span>Nomenclatura catastral</span><strong>' + esc(E.nc(t) || 'Sin indicar') + '</strong></div></li>'
         )
         .join('') +
       '</ol>';
@@ -766,7 +773,7 @@
         metodo: f.metodo, profundidad: String(f.prof).trim().replace('.', ','), descripcion: f.descripcion.trim()
       },
       localidad: f.localidad,
-      tramos: st.tramos.map((x) => ({ barrio: x.barrio.trim(), calle: x.calle.trim(), altura: x.altura.trim() })),
+      tramos: st.tramos.map((x) => ({ barrio: x.barrio.trim(), calle: x.calle.trim(), altura: x.altura.trim(), nc: E.nc(x) })),
       zona: zonaValida(),
       adjuntos: st.archivos.map((a) => ({ id: a.id, nombre: a.nombre, bytes: a.bytes })),
       aceptaciones: { notificaciones: true, formatoDigital: true, exploracionManual: true }
