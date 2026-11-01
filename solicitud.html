@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototipo · Nueva solicitud de interferencias | EPEN</title>
+<meta name="description" content="Pedile a EPEN la ubicación de sus instalaciones subterráneas en la zona de tu obra.">
+<meta name="theme-color" content="#2B3E4C">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/icono-180.png">
+<link rel="stylesheet" href="css/fuentes.css">
+<link rel="stylesheet" href="css/epen.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<div class="prototipo" role="note" aria-label="Aviso de prototipo">
+<div class="contenedor prototipo__in">
+<p><strong>Prototipo de propuesta.</strong> No es un trámite real de EPEN: los datos son de ejemplo y quedan solo en este navegador.</p>
+<div class="prototipo__acciones" data-acciones-prototipo></div>
+</div>
+</div>
+
+<header class="cabecera">
+<div class="contenedor cabecera__in">
+<a class="cabecera__logo" href="https://www.epen.gov.ar/"><img src="img/logo-epen.png" alt="EPEN, Ente Provincial de Energía del Neuquén" width="288" height="80"></a>
+<img class="cabecera__gob" src="img/logos-gobierno.png" alt="Provincia del Neuquén. Gobierno de la Provincia del Neuquén" width="402" height="80">
+</div>
+</header>
+
+<nav class="nav sobre-oscuro" aria-label="Principal">
+<div class="contenedor nav__in">
+<button class="nav__boton" type="button" aria-expanded="false" aria-controls="nav-lista"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M4 7 H20 M4 12 H20 M4 17 H20"></path></svg>Menú</button>
+<ul class="nav__lista" id="nav-lista">
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/">Inicio</a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/informacion-institucional/">Nuestra Empresa<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" style="stroke-width:2.6"><path d="M6 9 L12 15 L18 9"></path></svg></a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/cortes-programados/"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M9 18 H15"></path><path d="M10 21.5 H14"></path><path d="M12 2.5 A6.5 6.5 0 0 0 8.2 14.3 C8.9 14.8 9.2 15.4 9.2 16 H14.8 C14.8 15.4 15.1 14.8 15.8 14.3 A6.5 6.5 0 0 0 12 2.5 Z"></path></svg>Cortes Programados</a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/contactos-comerciales/"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M4.5 3.5 H8.5 L10.5 8.5 L8 10 A11.5 11.5 0 0 0 14 16 L15.5 13.5 L20.5 15.5 V19.5 A1.5 1.5 0 0 1 19 21 A16.5 16.5 0 0 1 3 5 A1.5 1.5 0 0 1 4.5 3.5 Z"></path></svg>Contáctenos</a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/licitaciones/"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M3 7 A2 2 0 0 1 5 5 H9.5 L11.5 7 H19 A2 2 0 0 1 21 9 V17 A2 2 0 0 1 19 19 H5 A2 2 0 0 1 3 17 Z"></path></svg>Licitaciones</a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/oficina-comercial/" aria-current="true"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"></rect><path d="M3 10 H21"></path></svg>Oficina Virtual</a></li>
+<li><a class="nav__enlace nav__enlace--icono" href="https://www.epen.gov.ar/?s=" aria-label="Buscar en el sitio de EPEN"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" style="stroke-width:2.6"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 L20.5 20.5"></path></svg><span class="nav__texto-movil" aria-hidden="true">Buscar</span></a></li>
+</ul>
+</div>
+</nav>
+
+<main id="contenido" tabindex="-1">
+<div class="contenedor">
+<nav class="migas" aria-label="Ruta de navegación">
+<a href="https://www.epen.gov.ar/index.php/oficina-comercial/">Oficina Virtual</a>
+<span aria-hidden="true">›</span>
+<a href="index.html">Solicitud de Interferencias</a>
+<span aria-hidden="true">›</span>
+<span aria-current="page">Nueva solicitud</span>
+</nav>
+<h1 class="titulo-pagina">Nueva solicitud de interferencias</h1>
+
+<ol class="pasos" id="pasos" aria-label="Pasos de la solicitud">
+<li data-paso="form" data-estado="actual" aria-current="step"><span class="pasos__n" aria-hidden="true">1</span><span>Completar los datos</span></li>
+<li data-paso="revision" data-estado="pendiente"><span class="pasos__n" aria-hidden="true">2</span><span>Revisar y enviar</span></li>
+<li data-paso="enviada" data-estado="pendiente"><span class="pasos__n" aria-hidden="true">3</span><span>Listo</span></li>
+</ol>
+
+<noscript><p class="recuadro recuadro--alerta" style="margin-top:24px">Para completar la solicitud necesitás tener JavaScript activado en el navegador.</p></noscript>
+
+<!-- Paso 1: formulario -->
+<div data-pantalla="form">
+<div class="diseno-lateral">
+<div class="diseno-lateral__principal">
+<p class="mt-0">Completá los datos y, antes de enviar, vas a poder revisar todo. Los campos con <strong>*</strong> son obligatorios.</p>
+
+<div class="aviso" id="aviso-borrador" hidden>
+<p id="aviso-borrador-texto"></p>
+<button class="boton boton--borde boton--chico" type="button" id="borrar-borrador">Empezar de nuevo</button>
+</div>
+
+<div class="resumen-errores" id="resumen-errores" tabindex="-1" aria-labelledby="resumen-errores-t" hidden>
+<h2 id="resumen-errores-t"></h2>
+<ul id="resumen-errores-lista"></ul>
+</div>
+
+<form id="formulario" novalidate>
+
+<section class="tarjeta tarjeta--seccion" id="s1" aria-labelledby="s1-t" style="margin-top:24px">
+<div class="tarjeta__cab"><span class="tarjeta__n" aria-hidden="true">1</span><h2 id="s1-t" tabindex="-1">Quién hace la solicitud</h2></div>
+<div class="tarjeta__cuerpo">
+<fieldset class="grupo">
+<legend>La solicitud la hace <span aria-hidden="true">*</span></legend>
+<div class="opciones">
+<label class="opcion"><input type="radio" name="quien" value="persona"><span>Una persona</span></label>
+<label class="opcion"><input type="radio" name="quien" value="empresa" checked><span>Una empresa o entidad</span></label>
+</div>
+</fieldset>
+
+<div data-si="persona" hidden>
+<div class="grilla-campos">
+<div class="campo">
+<label class="campo__etiqueta" for="f-dni">DNI <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-dni" data-campo="dni" type="text" inputmode="numeric" autocomplete="off" placeholder="Sin puntos" maxlength="12" aria-required="true" aria-describedby="e-f-dni">
+<p class="campo__error" id="e-f-dni" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="f-nombre">Nombre y apellido <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-nombre" data-campo="nombre" type="text" autocomplete="name" maxlength="120" aria-required="true" aria-describedby="e-f-nombre">
+<p class="campo__error" id="e-f-nombre" hidden></p>
+</div>
+</div>
+</div>
+
+<div data-si="empresa">
+<div style="display:flex;flex-direction:column;gap:20px">
+<div class="grilla-campos">
+<div class="campo">
+<label class="campo__etiqueta" for="f-cuit">CUIT <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-cuit" data-campo="cuit" type="text" inputmode="numeric" autocomplete="off" placeholder="Ej.: 30-12345678-9" maxlength="15" aria-required="true" aria-describedby="e-f-cuit">
+<p class="campo__error" id="e-f-cuit" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="f-razon">Razón social <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-razon" data-campo="razon" type="text" autocomplete="organization" maxlength="160" aria-required="true" aria-describedby="e-f-razon">
+<p class="campo__error" id="e-f-razon" hidden></p>
+</div>
+</div>
+<div class="grilla-campos">
+<div class="campo">
+<label class="campo__etiqueta" for="f-tipo-entidad">Tipo de entidad <span aria-hidden="true">*</span></label>
+<select class="entrada" id="f-tipo-entidad" data-campo="tipoEntidad" aria-required="true" aria-describedby="e-f-tipo-entidad">
+<option value="">Elegí una opción</option>
+<option>Empresa contratista</option>
+<option>Municipio o comisión de fomento</option>
+<option>Organismo provincial o nacional</option>
+<option>Cooperativa de servicios</option>
+<option>Otra</option>
+</select>
+<p class="campo__error" id="e-f-tipo-entidad" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="f-domicilio">Domicilio fiscal <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-domicilio" data-campo="domicilio" type="text" autocomplete="street-address" placeholder="Calle, número y localidad" maxlength="200" aria-required="true" aria-describedby="e-f-domicilio">
+<p class="campo__error" id="e-f-domicilio" hidden></p>
+</div>
+</div>
+<fieldset class="grupo grupo--caja">
+<legend>Representante</legend>
+<p class="campo__ayuda" style="margin:0 0 14px">Es quien pide la información en nombre de la empresa o entidad. La respuesta se envía a su correo.</p>
+<div class="grilla-campos">
+<div class="campo">
+<label class="campo__etiqueta" for="f-rep-dni">DNI del representante <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-rep-dni" data-campo="repDni" type="text" inputmode="numeric" autocomplete="off" placeholder="Sin puntos" maxlength="12" aria-required="true" aria-describedby="e-f-rep-dni">
+<p class="campo__error" id="e-f-rep-dni" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="f-rep-nombre">Nombre y apellido <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-rep-nombre" data-campo="repNombre" type="text" autocomplete="name" maxlength="120" aria-required="true" aria-describedby="e-f-rep-nombre">
+<p class="campo__error" id="e-f-rep-nombre" hidden></p>
+</div>
+</div>
+</fieldset>
+</div>
+</div>
+</div>
+</section>
+
+<section class="tarjeta tarjeta--seccion" id="s2" aria-labelledby="s2-t">
+<div class="tarjeta__cab"><span class="tarjeta__n" aria-hidden="true">2</span><h2 id="s2-t" tabindex="-1">Contacto</h2></div>
+<div class="tarjeta__cuerpo">
+<div class="grilla-campos">
+<div class="campo">
+<label class="campo__etiqueta" for="f-correo">Correo electrónico <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-correo" data-campo="correo" type="email" autocomplete="email" placeholder="nombre@dominio.com" maxlength="160" aria-required="true" aria-describedby="e-f-correo">
+<p class="campo__error" id="e-f-correo" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="f-correo2">Repetí el correo <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-correo2" data-campo="correo2" type="email" autocomplete="off" maxlength="160" aria-required="true" aria-describedby="e-f-correo2">
+<p class="campo__error" id="e-f-correo2" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="f-tel">Teléfono <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-tel" data-campo="tel" type="tel" autocomplete="tel" placeholder="Con código de área, ej.: 294 4123456" maxlength="30" aria-required="true" aria-describedby="e-f-tel">
+<p class="campo__error" id="e-f-tel" hidden></p>
+</div>
+</div>
+<p class="campo__ayuda">Todas las notificaciones del trámite llegan a este correo. Si la pide una empresa, usá el del representante.</p>
+</div>
+</section>
+
+<section class="tarjeta tarjeta--seccion" id="s3" aria-labelledby="s3-t">
+<div class="tarjeta__cab"><span class="tarjeta__n" aria-hidden="true">3</span><h2 id="s3-t" tabindex="-1">La obra</h2></div>
+<div class="tarjeta__cuerpo">
+<div class="grilla-campos">
+<div class="campo">
+<label class="campo__etiqueta" for="f-tipo-trabajo">Tipo de trabajo <span aria-hidden="true">*</span></label>
+<select class="entrada" id="f-tipo-trabajo" data-campo="tipoTrabajo" aria-required="true" aria-describedby="e-f-tipo-trabajo">
+<option value="">Elegí una opción</option>
+<option>Agua o cloacas</option>
+<option>Gas</option>
+<option>Telecomunicaciones o fibra óptica</option>
+<option>Obra eléctrica</option>
+<option>Pavimento u obra vial</option>
+<option>Construcción o edificación</option>
+<option>Arbolado</option>
+<option>Otro</option>
+</select>
+<p class="campo__error" id="e-f-tipo-trabajo" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="f-proyecto">Nombre del proyecto <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-proyecto" data-campo="proyecto" type="text" placeholder="Ej.: Extensión de red de agua" maxlength="140" aria-required="true" aria-describedby="e-f-proyecto">
+<p class="campo__error" id="e-f-proyecto" hidden></p>
+</div>
+</div>
+<div class="grilla-campos">
+<div class="campo">
+<label class="campo__etiqueta" for="f-ejecuta">Quién ejecuta los trabajos <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-ejecuta" data-campo="ejecuta" type="text" maxlength="160" aria-required="true" aria-describedby="e-f-ejecuta">
+<p class="campo__error" id="e-f-ejecuta" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="f-prof">Profundidad máxima, en metros <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-prof" data-campo="prof" type="text" inputmode="decimal" autocomplete="off" placeholder="Ej.: 1,2" maxlength="6" aria-required="true" aria-describedby="e-f-prof">
+<p class="campo__error" id="e-f-prof" hidden></p>
+</div>
+</div>
+<div class="grilla-campos">
+<div class="campo">
+<label class="campo__etiqueta" for="f-inicio">Inicio previsto <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-inicio" data-campo="inicio" type="date" aria-required="true" aria-describedby="e-f-inicio">
+<p class="campo__error" id="e-f-inicio" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="f-fin">Fin previsto <span aria-hidden="true">*</span></label>
+<input class="entrada" id="f-fin" data-campo="fin" type="date" aria-required="true" aria-describedby="e-f-fin">
+<p class="campo__error" id="e-f-fin" hidden></p>
+</div>
+</div>
+<fieldset class="grupo" id="g-metodo" aria-describedby="e-g-metodo ayuda-metodo">
+<legend>¿Cómo se va a excavar? <span aria-hidden="true">*</span></legend>
+<div class="opciones">
+<label class="opcion"><input type="radio" name="metodo" value="A mano"><span>A mano</span></label>
+<label class="opcion"><input type="radio" name="metodo" value="Con máquina"><span>Con máquina</span></label>
+<label class="opcion"><input type="radio" name="metodo" value="Perforación dirigida"><span>Perforación dirigida</span></label>
+<label class="opcion"><input type="radio" name="metodo" value="Hincado de postes o pilotes"><span>Hincado de postes o pilotes</span></label>
+</div>
+<p class="campo__error" id="e-g-metodo" style="margin-top:8px" hidden></p>
+<p class="campo__ayuda" id="ayuda-metodo" style="margin-top:12px">Sea cual sea el método, primero hay que hacer exploraciones manuales hasta descubrir los conductores. Sobre la traza está prohibido usar máquinas excavadoras u otros medios mecánicos.</p>
+</fieldset>
+</div>
+</section>
+
+<section class="tarjeta tarjeta--seccion" id="s4" aria-labelledby="s4-t">
+<div class="tarjeta__cab"><span class="tarjeta__n" aria-hidden="true">4</span><h2 id="s4-t" tabindex="-1">Dónde es la obra</h2></div>
+<div class="tarjeta__cuerpo">
+<div class="grilla-campos">
+<div class="campo">
+<label class="campo__etiqueta" for="f-localidad">Localidad <span aria-hidden="true">*</span></label>
+<select class="entrada" id="f-localidad" data-campo="localidad" aria-required="true" aria-describedby="e-f-localidad">
+<option value="">Elegí la localidad</option>
+</select>
+<p class="campo__error" id="e-f-localidad" hidden></p>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:6px">
+<h3 style="margin:0;font-size:18px;font-weight:800">Calles o tramos</h3>
+<p class="campo__ayuda">Cargá cada calle o tramo donde vas a trabajar. La respuesta de EPEN va tramo por tramo.</p>
+</div>
+<div class="tramos" id="tramos"></div>
+<div class="botonera" style="gap:10px 16px">
+<button class="boton boton--borde-verde boton--chico" type="button" id="agregar-tramo"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" style="stroke-width:2.8"><path d="M12 5 V19"></path><path d="M5 12 H19"></path></svg>Agregar otra calle o tramo</button>
+<span class="texto-2" id="cuenta-tramos" style="font-size:15px" aria-live="polite"></span>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<h3 id="mapa-titulo" style="margin:0;font-size:18px;font-weight:800">Marcá la zona en el mapa <span style="font-size:15px;font-weight:600;color:var(--texto-2)">(opcional, nos ayuda a responder más rápido)</span></h3>
+<div class="mapa">
+<div class="mapa__barra" role="toolbar" aria-label="Herramientas del mapa">
+<button class="mapa__herramienta" type="button" data-modo="area" aria-pressed="true">Dibujar un área</button>
+<button class="mapa__herramienta" type="button" data-modo="punto" aria-pressed="false">Marcar un punto</button>
+<span class="mapa__separador"></span>
+<button class="mapa__herramienta" type="button" id="mapa-deshacer" disabled>Deshacer</button>
+<button class="mapa__herramienta" type="button" id="mapa-borrar" disabled>Borrar</button>
+</div>
+<div class="mapa__lienzo">
+<div class="mapa__superficie" id="mapa-superficie" tabindex="0" role="application" aria-roledescription="mapa" aria-label="Mapa esquemático de la zona" aria-describedby="mapa-teclado mapa-estado"></div>
+</div>
+<p class="mapa__estado" id="mapa-estado" aria-live="polite">Todavía no marcaste la zona.</p>
+<p class="mapa__teclado" id="mapa-teclado">Con teclado: entrá al mapa, movete con las flechas (con Mayúscula, más rápido), marcá con Enter y borrá la última marca con Retroceso. Es un esquema de referencia, no un mapa real.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="tarjeta tarjeta--seccion" id="s5" aria-labelledby="s5-t">
+<div class="tarjeta__cab"><span class="tarjeta__n" aria-hidden="true">5</span><h2 id="s5-t" tabindex="-1">Descripción y planos</h2></div>
+<div class="tarjeta__cuerpo">
+<div class="campo">
+<label class="campo__etiqueta" for="f-descripcion">Describí los trabajos <span aria-hidden="true">*</span></label>
+<textarea class="entrada" id="f-descripcion" data-campo="descripcion" rows="4" maxlength="500" placeholder="Ej.: zanjeo de 120 m por vereda norte para una conexión de agua, a 1,2 m de profundidad." aria-required="true" aria-describedby="e-f-descripcion cuenta-desc"></textarea>
+<div class="campo__pie">
+<p class="campo__error" id="e-f-descripcion" hidden></p>
+<span class="campo__cuenta" id="cuenta-desc">0 de 500 caracteres</span>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<span class="campo__etiqueta" id="planos-t">Planos del proyecto <span class="campo__opcional">(opcional)</span></span>
+<label class="zona-archivos" id="zona-planos" for="f-planos">
+<svg aria-hidden="true" width="36" height="36" viewBox="0 0 24 24"><path d="M12 15 V4"></path><path d="M7.5 8.5 L12 4 L16.5 8.5"></path><path d="M4 15 V20 H20 V15"></path></svg>
+<span class="zona-archivos__titulo">Elegí los archivos o arrastralos acá</span>
+<span class="zona-archivos__nota">PDF, DWG, DXF, KMZ, KML, JPG o PNG. Hasta 20 MB cada uno y 10 en total.</span>
+<input id="f-planos" type="file" multiple accept=".pdf,.dwg,.dxf,.kmz,.kml,.jpg,.jpeg,.png" aria-describedby="planos-t">
+</label>
+<div class="avisos-archivos" id="avisos-planos" aria-live="assertive"></div>
+<ul class="archivos" id="lista-planos" aria-label="Planos adjuntos"></ul>
+</div>
+</div>
+</section>
+
+<section class="tarjeta tarjeta--seccion" id="s6" aria-labelledby="s6-t">
+<div class="tarjeta__cab"><span class="tarjeta__n" aria-hidden="true">6</span><h2 id="s6-t" tabindex="-1">Confirmación</h2></div>
+<div class="tarjeta__cuerpo" style="gap:16px">
+<div class="casilla">
+<label><input id="c-notif" data-acepta="notif" type="checkbox" aria-describedby="e-c-notif"><span>Acepto que las notificaciones enviadas al correo que declaré sean válidas, efectivas y fehacientes.</span></label>
+<p class="campo__error" id="e-c-notif" hidden></p>
+</div>
+<div class="casilla">
+<label><input id="c-digital" data-acepta="digital" type="checkbox" aria-describedby="e-c-digital"><span>Acepto recibir en formato digital, por correo, la nota y los planos de interferencias que envíe EPEN.</span></label>
+<p class="campo__error" id="e-c-digital" hidden></p>
+</div>
+<div class="casilla">
+<label><input id="c-explora" data-acepta="explora" type="checkbox" aria-describedby="e-c-explora"><span>Me comprometo a hacer exploraciones manuales previas hasta descubrir los conductores, y asumo la responsabilidad por los daños a terceros o a EPEN.</span></label>
+<p class="campo__error" id="e-c-explora" hidden></p>
+</div>
+</div>
+</section>
+
+<div class="botonera" style="margin-top:28px;gap:14px 22px">
+<button class="boton boton--verde boton--grande" type="submit">Revisar la solicitud</button>
+<span class="texto-2" style="font-size:15px">En el paso siguiente ves todo junto antes de enviar.</span>
+</div>
+</form>
+</div>
+
+<aside class="diseno-lateral__lateral" aria-label="Información del trámite">
+<section class="recuadro recuadro--crema" aria-labelledby="a1">
+<h2 id="a1">Antes de empezar</h2>
+<p>Tené a mano:</p>
+<ul>
+<li>DNI o CUIT de quien pide y del representante</li>
+<li>Barrio y calles de cada tramo</li>
+<li>Fechas, método y profundidad de la excavación</li>
+<li>Planos del proyecto, si los tenés</li>
+</ul>
+<p class="texto-2" style="font-size:15px">Lo que cargás se guarda en este dispositivo mientras completás, así no perdés nada si cerrás la página.</p>
+</section>
+<section class="recuadro recuadro--borde" aria-labelledby="a2">
+<h2 id="a2">Qué vas a recibir</h2>
+<p>Una nota del Sector Técnico que indica, para cada calle o tramo, si hay instalaciones subterráneas de EPEN, con el plano adjunto cuando corresponde.</p>
+<p><strong>Plazo:</strong> 72 horas hábiles desde que la solicitud está completa.</p>
+</section>
+<section class="recuadro recuadro--pizarra sobre-oscuro" aria-labelledby="a3">
+<h2 id="a3">Antes de excavar</h2>
+<p>Las profundidades y distancias a la Línea Municipal de los planos son las registradas al construir la red y pueden haber cambiado. Hacé siempre exploraciones manuales hasta descubrir los conductores.</p>
+<p>Los daños a terceros o a EPEN son responsabilidad de quien ejecuta la obra.</p>
+</section>
+<section class="recuadro recuadro--gris" aria-labelledby="a4">
+<h2 id="a4">¿Tenés dudas?</h2>
+<p>Comunicate con el Servicio Eléctrico de tu localidad en su horario de atención.</p>
+<p style="margin-top:10px"><a href="https://www.epen.gov.ar/index.php/contactos-comerciales/" style="font-weight:800">Ver contactos comerciales y guardias</a></p>
+</section>
+<nav class="avance" id="avance" aria-labelledby="avance-t">
+<h2 id="avance-t">Tu avance</h2>
+<div class="avance__barra" aria-hidden="true"><div class="avance__relleno" id="avance-relleno"></div></div>
+<p class="avance__texto" id="avance-texto"></p>
+<ol id="avance-lista"></ol>
+</nav>
+</aside>
+</div>
+</div>
+
+<!-- Paso 2: revisión -->
+<section class="revision" data-pantalla="revision" aria-labelledby="rev-t" hidden></section>
+
+<!-- Paso 3: listo -->
+<div data-pantalla="enviada" hidden></div>
+</div>
+</main>
+
+<footer class="pie sobre-oscuro">
+<div class="contenedor pie__in">
+<img class="pie__logos" src="img/logos-provincia-pie.png" alt="Provincia del Neuquén. Gobierno de la Provincia del Neuquén" width="192" height="144">
+<div class="pie__redes">
+<span class="pie__redes-titulo">Visitanos en nuestras redes sociales</span>
+<div class="pie__redes-lista">
+<a class="pie__red" href="https://twitter.com/epen_informa">X</a>
+<a class="pie__red" href="https://www.youtube.com/channel/UCZHgC_AKQc4i6p4s6a_DN8Q">YouTube</a>
+<a class="pie__red" href="https://www.facebook.com/EPEN.Neuquen">Facebook</a>
+</div>
+<a class="pie__enlace" href="https://www.epen.gov.ar/index.php/web-mail/">Web Mail</a>
+</div>
+<a class="pie__personal" href="bandeja.html"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="1.5"></rect><path d="M8 10.5 V7.5 A4 4 0 0 1 16 7.5 V10.5"></path></svg>Acceso para personal de EPEN</a>
+</div>
+<div class="pie__copy">Ente Provincial de Energía del Neuquén © Copyright 2026</div>
+</footer>
+
+<script src="js/comun.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/solicitud.js"></script>
+<script>(function(){var p='Prototipo · ',el=document.querySelector('title');function f(){if(document.title.indexOf(p)!==0)document.title=p+document.title;}f();if(el)new MutationObserver(f).observe(el,{childList:true,characterData:true,subtree:true});})();</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototipo · Consultar el estado de tu solicitud | EPEN</title>
+<meta name="description" content="Consultá en qué estado está tu solicitud de interferencias con el número de trámite y tu correo.">
+<meta name="theme-color" content="#2B3E4C">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/icono-180.png">
+<link rel="stylesheet" href="css/fuentes.css">
+<link rel="stylesheet" href="css/epen.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<div class="prototipo" role="note" aria-label="Aviso de prototipo">
+<div class="contenedor prototipo__in">
+<p><strong>Prototipo de propuesta.</strong> No es un trámite real de EPEN. Los trámites de ejemplo se consultan con el correo <strong>prueba@example.com</strong>.</p>
+<div class="prototipo__acciones" data-acciones-prototipo></div>
+</div>
+</div>
+
+<header class="cabecera">
+<div class="contenedor cabecera__in">
+<a class="cabecera__logo" href="https://www.epen.gov.ar/"><img src="img/logo-epen.png" alt="EPEN, Ente Provincial de Energía del Neuquén" width="288" height="80"></a>
+<img class="cabecera__gob" src="img/logos-gobierno.png" alt="Provincia del Neuquén. Gobierno de la Provincia del Neuquén" width="402" height="80">
+</div>
+</header>
+
+<nav class="nav sobre-oscuro" aria-label="Principal">
+<div class="contenedor nav__in">
+<button class="nav__boton" type="button" aria-expanded="false" aria-controls="nav-lista"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24"><path d="M4 7 H20 M4 12 H20 M4 17 H20"></path></svg>Menú</button>
+<ul class="nav__lista" id="nav-lista">
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/">Inicio</a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/informacion-institucional/">Nuestra Empresa<svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" style="stroke-width:2.6"><path d="M6 9 L12 15 L18 9"></path></svg></a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/cortes-programados/"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M9 18 H15"></path><path d="M10 21.5 H14"></path><path d="M12 2.5 A6.5 6.5 0 0 0 8.2 14.3 C8.9 14.8 9.2 15.4 9.2 16 H14.8 C14.8 15.4 15.1 14.8 15.8 14.3 A6.5 6.5 0 0 0 12 2.5 Z"></path></svg>Cortes Programados</a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/contactos-comerciales/"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M4.5 3.5 H8.5 L10.5 8.5 L8 10 A11.5 11.5 0 0 0 14 16 L15.5 13.5 L20.5 15.5 V19.5 A1.5 1.5 0 0 1 19 21 A16.5 16.5 0 0 1 3 5 A1.5 1.5 0 0 1 4.5 3.5 Z"></path></svg>Contáctenos</a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/licitaciones/"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M3 7 A2 2 0 0 1 5 5 H9.5 L11.5 7 H19 A2 2 0 0 1 21 9 V17 A2 2 0 0 1 19 19 H5 A2 2 0 0 1 3 17 Z"></path></svg>Licitaciones</a></li>
+<li><a class="nav__enlace" href="https://www.epen.gov.ar/index.php/oficina-comercial/" aria-current="true"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2"></rect><path d="M3 10 H21"></path></svg>Oficina Virtual</a></li>
+<li><a class="nav__enlace nav__enlace--icono" href="https://www.epen.gov.ar/?s=" aria-label="Buscar en el sitio de EPEN"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" style="stroke-width:2.6"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5 L20.5 20.5"></path></svg><span class="nav__texto-movil" aria-hidden="true">Buscar</span></a></li>
+</ul>
+</div>
+</nav>
+
+<main id="contenido" tabindex="-1">
+<div class="contenedor">
+<nav class="migas" aria-label="Ruta de navegación">
+<a href="https://www.epen.gov.ar/index.php/oficina-comercial/">Oficina Virtual</a>
+<span aria-hidden="true">›</span>
+<a href="index.html">Solicitud de Interferencias</a>
+<span aria-hidden="true">›</span>
+<span aria-current="page">Consultar el estado</span>
+</nav>
+<h1 class="titulo-pagina">Consultar el estado de tu solicitud</h1>
+
+<noscript><p class="recuadro recuadro--alerta" style="margin-top:24px">Para consultar el estado necesitás tener JavaScript activado en el navegador.</p></noscript>
+
+<section class="buscador" aria-labelledby="buscar-t">
+<h2 id="buscar-t">Buscá tu solicitud</h2>
+<p class="texto-2" style="margin:6px 0 0;font-size:16px">Ingresá el número de trámite y el correo con el que la pediste. Los dos están en el correo de confirmación.</p>
+<form id="buscar" novalidate>
+<div class="buscador__campos">
+<div class="campo">
+<label class="campo__etiqueta" for="b-numero">Número de trámite</label>
+<input class="entrada" id="b-numero" type="text" autocomplete="off" placeholder="Ej.: INT 148/26" maxlength="20" aria-describedby="e-b-numero">
+<p class="campo__error" id="e-b-numero" hidden></p>
+</div>
+<div class="campo">
+<label class="campo__etiqueta" for="b-correo">Correo electrónico</label>
+<input class="entrada" id="b-correo" type="email" autocomplete="email" placeholder="nombre@dominio.com" maxlength="160" aria-describedby="e-b-correo">
+<p class="campo__error" id="e-b-correo" hidden></p>
+</div>
+<div class="buscador__accion"><button class="boton boton--verde" type="submit">Consultar</button></div>
+</div>
+</form>
+<p class="error-texto" id="no-encontrado" role="alert" style="margin-top:14px;font-size:16px" hidden>No encontramos una solicitud con ese número y ese correo. Revisá los datos del correo de confirmación.</p>
+<div class="recientes" id="recientes" hidden></div>
+</section>
+
+<section class="tarjeta resultado" id="resultado" aria-labelledby="res-t"></section>
+
+<section class="recuadro recuadro--pizarra sobre-oscuro" aria-labelledby="excavar-t" style="margin-top:28px">
+<h2 id="excavar-t">Antes de excavar</h2>
+<p style="max-width:860px">Las profundidades y distancias a la Línea Municipal de los planos son las registradas al construir la red y pueden haber cambiado. Hacé siempre exploraciones manuales hasta descubrir los conductores: sobre la traza está prohibido usar máquinas excavadoras u otros medios mecánicos. Si encontrás un cable que no figura en el plano, frená la obra y avisá a la guardia de EPEN.</p>
+</section>
+</div>
+</main>
+
+<footer class="pie sobre-oscuro">
+<div class="contenedor pie__in">
+<img class="pie__logos" src="img/logos-provincia-pie.png" alt="Provincia del Neuquén. Gobierno de la Provincia del Neuquén" width="192" height="144">
+<div class="pie__redes">
+<span class="pie__redes-titulo">Visitanos en nuestras redes sociales</span>
+<div class="pie__redes-lista">
+<a class="pie__red" href="https://twitter.com/epen_informa">X</a>
+<a class="pie__red" href="https://www.youtube.com/channel/UCZHgC_AKQc4i6p4s6a_DN8Q">YouTube</a>
+<a class="pie__red" href="https://www.facebook.com/EPEN.Neuquen">Facebook</a>
+</div>
+<a class="pie__enlace" href="https://www.epen.gov.ar/index.php/web-mail/">Web Mail</a>
+</div>
+<a class="pie__personal" href="bandeja.html"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="1.5"></rect><path d="M8 10.5 V7.5 A4 4 0 0 1 16 7.5 V10.5"></path></svg>Acceso para personal de EPEN</a>
+</div>
+<div class="pie__copy">Ente Provincial de Energía del Neuquén © Copyright 2026</div>
+</footer>
+
+<script src="js/comun.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/seguimiento.js"></script>
+<script>(function(){var p='Prototipo · ',el=document.querySelector('title');function f(){if(document.title.indexOf(p)!==0)document.title=p+document.title;}f();if(el)new MutationObserver(f).observe(el,{childList:true,characterData:true,subtree:true});})();</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prototipo · Bandeja de interferencias | Sector Técnico EPEN</title>
+<meta name="theme-color" content="#2B3E4C">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/icono-180.png">
+<link rel="stylesheet" href="css/fuentes.css">
+<link rel="stylesheet" href="css/epen.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<div class="prototipo" role="note" aria-label="Aviso de prototipo">
+<div class="contenedor contenedor--ancho prototipo__in">
+<p><strong>Prototipo de propuesta.</strong> Bandeja interna del Sector Técnico. En la versión real pide usuario y contraseña del personal de EPEN.</p>
+<div class="prototipo__acciones" data-acciones-prototipo></div>
+</div>
+</div>
+
+<header class="cabecera cabecera--interna">
+<div class="contenedor contenedor--ancho cabecera__in">
+<a class="cabecera__logo" href="bandeja.html"><img src="img/logo-epen.png" alt="EPEN, Ente Provincial de Energía del Neuquén. Bandeja interna" width="230" height="64"></a>
+<div class="cabecera__area">
+<p class="cabecera__area-titulo">Sector Técnico</p>
+<p class="cabecera__area-sub">Servicio Eléctrico Villa La Angostura. Uso interno.</p>
+</div>
+</div>
+</header>
+
+<nav class="nav nav--interna sobre-oscuro" aria-label="Principal">
+<div class="contenedor contenedor--ancho nav__in">
+<ul class="nav__lista">
+<li><a class="nav__enlace" href="bandeja.html" aria-current="page" style="font-weight:600"><svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24"><path d="M3 13 L6 4 H18 L21 13 V20 H3 Z"></path><path d="M3 13 H8 L9.5 16 H14.5 L16 13 H21"></path></svg>Bandeja de interferencias</a></li>
+<li><a class="nav__enlace" href="index.html" style="font-weight:600">Ver el sitio público</a></li>
+</ul>
+</div>
+</nav>
+
+<main id="contenido" tabindex="-1" class="contenedor contenedor--ancho" style="padding-top:26px">
+<h1 class="titulo-pagina" style="margin:0;padding-bottom:18px;text-align:left;font-size:clamp(30px,3.6vw,40px);line-height:1.15">Solicitudes de interferencias</h1>
+<p class="texto-2" style="margin:14px 0 0;max-width:820px;font-size:17px">Cada pedido llega con los tramos, la zona marcada y los planos. Indicás el resultado de cada tramo y la nota se arma con el modelo del Sector Técnico.</p>
+
+<noscript><p class="recuadro recuadro--alerta" style="margin-top:24px">Para usar la bandeja necesitás tener JavaScript activado en el navegador.</p></noscript>
+
+<div class="filtros" id="filtros" role="group" aria-label="Filtrar por estado"></div>
+
+<div class="herramientas-lista">
+<div class="campo">
+<label class="campo__etiqueta" for="buscar" style="font-size:15px">Buscar</label>
+<input class="entrada" id="buscar" type="search" placeholder="Número, solicitante o barrio" autocomplete="off">
+</div>
+<p class="cuenta-lista" id="cuenta-lista" aria-live="polite"></p>
+</div>
+
+<div class="tabla-caja">
+<table class="tabla" id="tabla">
+<caption class="visualmente-oculto">Solicitudes de interferencias. Elegí una para ver el detalle.</caption>
+<thead><tr><th scope="col">N°</th><th scope="col">Solicitante</th><th scope="col">Trabajo</th><th scope="col">Barrio</th><th scope="col">Ingresó</th><th scope="col">Estado</th></tr></thead>
+<tbody id="filas"></tbody>
+</table>
+<p class="tabla__vacio" id="sin-resultados" hidden>No hay solicitudes con ese filtro o esa búsqueda.</p>
+</div>
+
+<section class="tarjeta detalle" id="detalle" aria-labelledby="det-t"></section>
+</main>
+
+<footer class="pie sobre-oscuro" style="margin-top:64px">
+<div class="contenedor contenedor--ancho pie__simple">
+<span>Ente Provincial de Energía del Neuquén. Sector Técnico, uso interno.</span>
+<a class="pie__enlace" href="index.html">Ver el sitio público</a>
+</div>
+</footer>
+
+<script src="js/comun.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/bandeja.js"></script>
+<script>(function(){var p='Prototipo · ',el=document.querySelector('title');function f(){if(document.title.indexOf(p)!==0)document.title=p+document.title;}f();if(el)new MutationObserver(f).observe(el,{childList:true,characterData:true,subtree:true});})();</script>
+</body>
+</html>
